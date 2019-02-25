@@ -1,5 +1,5 @@
 # Source layer
-FROM brendanrius/jupyter-c-kernel:6db0d67b54c1
+FROM brendanrius/jupyter-c-kernel
 
 # Install latest version of jupyter
 RUN pip install --no-cache-dir notebook==5.*
