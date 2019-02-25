@@ -1,5 +1,5 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/8greg8/c_tutorial/master?urlpath=main.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/8greg8/c_tutorial/master?urlpath=lab/main.ipynb)
 
 # Interactive C Tutorial
 
@@ -28,7 +28,7 @@ Start the notebook
 
 ### Binder
 Click on the badge below to start:
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/8greg8/c_tutorial/master?urlpath=main.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/8greg8/c_tutorial/master?urlpath=lab/main.ipynb)
 
 ## Software backend
 [Xeus Cling](https://github.com/QuantStack/xeus-cling# "Xeus Cling")
