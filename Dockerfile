@@ -5,6 +5,7 @@ FROM brendanrius/jupyter-c-kernel
 RUN pip install --no-cache --upgrade pip && \
     pip install --no-cache notebook && \
     pip install --no-cache jupyterlab
-    
-# Copy repo to home
-COPY . /home
+
+# Configure HOME
+RUN rm -r ${HOME}/work
+COPY . ${HOME}
