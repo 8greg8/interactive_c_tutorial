@@ -1,12 +1,14 @@
 # Source layer
 FROM brendanrius/jupyter-c-kernel
 
-# Install latest version of jupyter
-RUN pip install --no-cache-dir notebook==5.*
+# install the notebook package
+RUN pip install --no-cache --upgrade pip && \
+    pip install --no-cache notebook
 
-# Setup a user
-ENV NB_USER jovyan
-ENV NB_UID 1000
+# create user with a home directory
+ARG NB_USER
+ARG NB_UID
+ENV USER ${NB_USER}
 ENV HOME /home/${NB_USER}
 
 RUN adduser --disabled-password \
@@ -19,3 +21,4 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${NB_UID} ${HOME}
 USER ${NB_USER}
+WORKDIR ${HOME}
