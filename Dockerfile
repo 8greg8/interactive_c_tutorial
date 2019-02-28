@@ -9,5 +9,12 @@ RUN pip install --no-cache --upgrade pip && \
 # Configure HOME
 RUN rm -r ${HOME}/work
 
-USER ${NB_USER}
+# Configure user 
+ENV NB_USER jovyan
+ENV NB_UID 1000
+ENV HOME /home/${NB_USER}
+
 COPY . ${HOME}
+USER root
+RUN chown -R ${NB_UID} ${HOME}
+USER ${NB_USER}
