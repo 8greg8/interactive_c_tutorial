@@ -8,4 +8,6 @@ RUN pip install --no-cache --upgrade pip && \
 
 # Configure HOME
 RUN rm -r ${HOME}/work
+
+USER ${NB_USER}
 COPY . ${HOME}
